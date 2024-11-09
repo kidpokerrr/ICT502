@@ -10,8 +10,8 @@ document.getElementById("calculate-btn")?.addEventListener("click", () => {
     // Get the destination entered by the user and remove extra spaces
     const destination = document.getElementById("destination").value.trim();
 
-    // Get the number of travelers as an integer
-    const numTravelers = parseInt(document.getElementById("num-travelers").value);
+    // Get the number of travellers as an integer
+    const numTravellers = parseInt(document.getElementById("num-travellers").value);
 
     // Get the trip duration (in days) as an integer
     const duration = parseInt(document.getElementById("duration").value);
@@ -21,14 +21,14 @@ document.getElementById("calculate-btn")?.addEventListener("click", () => {
 
 
     // if loop which check if all the fields are filled correctly and calculates the travel cost
-    if (!destination || !numTravelers || !duration || !costPerDay) {
-        // If destination is empty
+    if (!destination || !numTravellers || !duration || !costPerDay) {
+        // If the destination is empty
         document.getElementById("result").textContent =
             "Please fill in all fields to calculate the cost.";
-    } else if (numTravelers <= 0 || numTravelers > 500) {
-        // If numTravelers is out of range
+    } else if (numTravellers <= 0 || numTravellers > 500) {
+        // If numTravellers is out of range
         document.getElementById("result").textContent =
-            "Number of travelers must be between 1 and 500.";
+            "Number of travellers must be between 1 and 500.";
     } else if (duration <= 0 || duration > 500) {
         // If duration is out of range
         document.getElementById("result").textContent =
@@ -39,11 +39,11 @@ document.getElementById("calculate-btn")?.addEventListener("click", () => {
             "Cost per day must be between $1 and $10,000,000.";
     } else {
         // If all fields are valid, calculate the total cost
-        const totalCost = numTravelers * duration * costPerDay;
+        const totalCost = numTravellers * duration * costPerDay;
 
         // Show the result
         document.getElementById("result").textContent =
-            `Total cost for ${numTravelers} traveler(s) to ${destination} is $${totalCost}.`;
+            `Total cost for ${numTravellers} traveller(s) to ${destination} is $${totalCost}.`;
     }
 });
 
