@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    margin: 0; /* Remove default margin from the page */
+    font-family: Arial, sans-serif; /* Set font style */
+    line-height: 1.6; /* Add space between lines */
+    scroll-behavior: smooth; /* Smooth scrolling for navigation */
+}
+
+/* Header */
+header {
+    background: #ec7141; /* Set header background colour */
+    color: white; /* Set text colour inside the header */
+    padding: clamp(0.5rem, 1vw, 0.7rem) 0; /* Add dynamic padding inside the header */
+    position: fixed; /* Keep header fixed at the top of the page */
+    top: 0; /* Position the header at the very top */
+    width: 100%; /* Make the header to use the entire width of the screen */
+    z-index: 1000; /* This means the header stays above other elements like background image etc. */
+}
+.webname {
+    font-size: clamp(1rem, 3vw, 2.2rem); /* Dynamically adjust website name size */
+    font-weight: bold; /* Website name text bold */
+    color: #14243D; /* Set colour for the website name */
+}
+nav {
+    display: flex; /* Use flexible box layout */
+    justify-content: space-between; /* even spacing between items */
+    align-items: center; /* Vertically center-align items */
+    padding: 0 clamp(5%, 10vw, 10%); /* Add dynamic padding for navigation */
+}
+.nav-items {
+    list-style: none; /* Remove bullet points from navigation bar items */
+    display: flex; /* Force the navigation bar items from verticle stacking to horizontal */
+    gap: clamp(1.8rem, 2vw, 1.5rem); /* Add dynamic spacing between navigation items */
+}
+.nav-items a {
+    color: #14243D; /* Set navigation items colour */
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* Dynamic font size for the navigations items */
+    text-decoration: none; /* Remove underline from the navigation items (links) */
+    transition: color 0.5s ease; /* Smooth colour change on mouse hover */
+}
+
+.nav-items a:hover {
+    color: #ffff00; /* Change navigation item colour on mouse hover */
+}
+
+/* index.html Container for both Home and Calculator sections */
+/* This will help add combined items like background image for both the sections and make these items have different 
+animation properties compared to the individual section items */
+.home-and-calculator {
+    background: url('images/index-background.jpg') no-repeat center center/cover; /* Add background image for the section */
+    background-attachment: fixed; 
+    min-height: 100vh; /* Set the height to occupy the full screen */
+    display: flex; /* Use flexible box layout */
+    flex-direction: column; /* Rearrange the items (buttons, input box etc.) vertically */
+}
+
+/* contact.html Container for the Contact Us section */
+.contact-page {
+    background: url('images/contact-background.jpg') no-repeat center center/cover; /* Add background image for contact page */
+    background-attachment: fixed; /* The background image will be fixed while scrolling */
+    min-height: 100vh; /* Set the height to occupy the full screen */
+    display: flex; /* Use flexible box layout */
+    flex-direction: column; /* Rearrange the items (buttons, input box etc.) vertically */
+}
+
+/* Home Section */
+.home-section {
+    background: transparent; /* Transparent background as the background image is already added above */
+    height: 100vh; /* Set the height of the section to occupy the entire screen */
+    display: flex; /* Use flexible box layout */
+    justify-content: center; /* Center all the items horizontally */
+    align-items: center; /* Center all the items vertically */
+    text-align: center; /* Make the text-align centered */
+    flex-direction: column; /* Rearrange the items (buttons, text etc.) vertically */
+}
+.home-section h1 {
+    font-size: clamp(3rem, 7vw, 7.7rem); /* Dynamic font size for the heading */
+    color: #ff9100; /* Heading colour */
+    margin-bottom: clamp(-1rem, -3vw, -3rem); /* Adjust spacing dynamically below the heading */
+    margin-top: clamp(-5rem, -8vw, -7rem); /* Adjust spacing dynamically above the heading */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 5px 5px 5px #000000d3; /* Add shadow effect to the heading */
+}
+.home-section p {
+    font-size: clamp(1rem, 3vw, 1.8rem); /* Dynamic font size for the paragraph */
+    color: #14243D; /* Paragraph text colour */
+    margin-bottom: clamp(8rem, 12vw, 14rem); /* Adjust spacing dynamically below the paragraph */
+}
+.home-section button {
+    background: #81F6FF; /* Set button background colour */
+    color: black; /* Set button text colour */
+    font-weight: bold; /* Make the button text bold */
+    border: none; /* Remove button border */
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem); /* Add dynamic padding inside the button */
+    font-size: clamp(1rem, 2vw, 1.1rem); /* Dynamic font size for the button */
+    cursor: pointer; /* Change mouse pointer to hand on mouse hover */
+    border-radius: clamp(3px, 1vw, 5px); /* Add dynamic rounded corners to the button */
+    width: clamp(200px, 40vw, 400px); /* Add dynamic width for the button */
+    transition: background 0.7s ease; /* Smooth transition of the button text and background colour on mouse hover */
+}
+.home-section button:hover {
+    color: white; /* Change button text colour on mouse hover */
+    font-weight: bold; /* Keep the button text bold */
+    background: #14243D; /* Change button background colour on mouse hover */
+}
+
+/* Calculator Section */
+.form-section#calculator {
+    background: transparent; /* Transparent background as the background image is already added above */
+    padding: clamp(1rem, 3vw, 2rem); /* Add dynamic padding for the calculator section */
+    min-height: 100vh; /* Set the height of the section to occupy the entire screen */
+    display: flex; /* Use flexible box layout */
+    flex-direction: column; /* Rearrange the items (buttons, input box etc.) vertically */
+    align-items: center; /* Center all the items vertically */
+    justify-content: center; /* Center all the items horizontally */
+}
+
+/* Contact Section */
+.form-section#contact {
+    background: transparent; /* Transparent background as the background image is already added above */
+    padding: clamp(1rem, 3vw, 2rem); /* Add dynamic padding for the contact section */
+    min-height: 100vh; /* Set the height of the section to occupy the entire screen */
+    display: flex; /* Use flexible box layout */
+    flex-direction: column; /* Rearrange the items (buttons, input box etc.) vertically */
+    align-items: center; /* Center all the items vertically */
+    justify-content: center; /* Center all the items horizontally */
+}
+
+/* Form Section Title */
+.form-section h2 {
+    color: #ff9100; /* Set the title colour */
+    font-size: clamp(1.5rem, 3vw, 2rem); /* Dynamic font size for the title */
+    font-weight: bold; /* Make the title text bold */
+    text-align: center; /* Make the text-align centered */
+    text-shadow: 2px 2px 5px #000000b3; /* Add shadow effect to the title */
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem); /* Adjust spacing dynamically below the title */
+}
+
+/* Form Styling */
+form {
+    display: flex; /* Use flexible box layout */
+    flex-direction: column; /* Rearrange the items vertically */
+    gap: clamp(0.8rem, 2vw, 1.5rem); /* Add dynamic gap between form fields */
+    width: 100%; /* Make form use the full width */
+    max-width: clamp(300px, 80vw, 800px); /* Adjust the maximum width dynamically */
+    margin: 0 auto; /* make the form align center */
+    padding: clamp(1rem, 4vw, 2rem); /* Add dynamic padding inside the form */
+    background-color: #00000033; /* Slightly translucent black background */
+    border-radius: clamp(5px, 1vw, 8px); /* Add dynamic rounded corners */
+}
+form label {
+    color: white; /* Label text colour */
+    font-weight: bold; /* Make label text bold */
+    font-size: clamp(0.9rem, 1.5vw, 1rem); /* Adjust the label size dynamically */
+}
+form input, form textarea, form button {
+    padding: clamp(0.5rem, 2vw, 0.8rem); /* Add dynamic padding for these form elements */
+    font-size: clamp(0.8rem, 1.5vw, 1rem); /* Dynamic font size for these form elements */
+    border: 1px solid #ccc; /* Add a thin border */
+    border-radius: clamp(3px, 1vw, 5px); /* Add dynamic rounded corners */
+    width: 100%; /* Make the form elements use the full width of the form */
+    max-width: clamp(200px, 700vw, 700px); /* Adjust the maximum width dynamically */
+    box-sizing: border-box; /* Include border to these form elements */
+    margin: 0 auto; /* make these form elements align center */
+}
+form textarea {
+    resize: none; /* Prevent resizing of the textarea */
+    height: 100px; /* Set height for the textarea */
+}
+form button {
+    background: #81F6FF; /* Set button background colour */
+    color: black; /* Set button text colour */
+    font-weight: bold; /* Make the button text bold */
+    border: none; /* Remove button border */
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem); /* Add dynamic padding for the button */
+    font-size: clamp(1rem, 2vw, 1.1rem); /* Dynamic font size for the button */
+    cursor: pointer; /* Change mouse pointer to hand on mouse hover */
+    border-radius: clamp(3px, 1vw, 5px); /* Add dynamic rounded corners to the button */
+    width: clamp(150px, 50vw, 300px); /* Add dynamic width for the button */
+    transition: background 0.7s ease; /* Smooth transition of the button text and background colour on mouse hover */
+}
+form button:hover {
+    color: white; /* Change button text colour on mouse hover */
+    font-weight: bold; /* Keep the button text bold */
+    background: #14243D; /* Change button background colour on mouse hover */
+}
+
+/* Styling the Output Message */
+#result {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Dynamic font size for the output message */
+    color: black; /* Output message text colour */
+    font-weight: bold; /* Make the output text bold */
+    margin-top: clamp(0.5rem, 2vw, 1rem); /* Adjust spacing dynamically above the output message */
+    text-align: center; /* Make the text-align centered */
+    text-shadow: 2px 2px 5px white; /* Add shadow effect to the output message text */
+    background-color: transparent; /* Transparent background */
+    padding: clamp(0.5rem, 1.5vw, 1rem); /* Add dynamic padding for the output message text */
+}
+
+/* Initial State: Hidden and slightly shifted down */
+[data-animate] {
+    opacity: 0; /* The element is not visible in the beginning */
+    transform: translateY(60px); /* The element start slightly below its original position */
+    transition: all 0.8s ease-out; /* Smoothly move to the final position in 0.8 seconds */
+}
+
+/* Final State: Fully visible and in normal position */
+[data-animate].in-view {
+    opacity: 1; /* The element becomes fully visible */
+    transform: translateY(0); /* The element moves back to its normal place */
+}

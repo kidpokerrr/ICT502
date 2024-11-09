@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CostCalc</title>
+
+    <!-- Link to CSS file for styling the webpage -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to JavaScript file for the calculator script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+
+            <!-- Name of the website -->
+            <div class="webname">CostCalc</div>
+
+            <!-- Navigation bar links -->
+            <ul class="nav-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#calculator">Trip Cost Calculator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container for both Home and Calculator sections, this gives flexibility such as one background image for both sections -->
+    <div class="home-and-calculator">
+
+        <!-- Home Section -->
+        <section id="home" class="home-section" data-animate>
+
+            <!-- Welcome message -->
+            <h1>Welcome</h1>
+            <p>Calculate the Cost of your Next Trip with ease</p>
+
+            <!-- Button for smooth scrolling to the calculator section -->
+            <button onclick="scrollToSection('calculator')">Calculate Your Trip Cost</button>
+        </section>
+
+        <!-- Trip Cost Calculator section -->
+        <section id="calculator" class="form-section" data-animate>
+            <h2>Trip Cost Calculator</h2>
+
+            <!-- Calculator Form for user to fill -->
+            <form id="trip-form">
+
+                <!-- Destination -->
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" placeholder="e.g., Paris" required>
+                
+                <!-- Number of Travelers -->
+                <label for="num-travelers">Number of Travelers:</label>
+                <!-- Ensure that the number is a positive integer -->
+                <input type="number" id="num-travelers" placeholder="e.g., 2" min="1" step="1" required>
+                
+                <!-- Duration in days -->
+                <label for="duration">Duration (in days):</label>
+                <!-- Ensure that the number is a positive integer -->
+                <input type="number" id="duration" placeholder="e.g., 5" min="1" step="1" required>
+                
+                <!-- Cost Per Day per person -->
+                <label for="cost-per-day">Cost Per Day (per person):</label>
+                <!-- Ensure that the number is positive -->
+                <input type="number" id="cost-per-day" placeholder="e.g., 100" min="1" required>
+                
+                <!-- Button to calculate the Trip Cost -->
+                <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+
+            <!-- Output field -->
+            <div id="result"></div>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- Link to CSS file for styling the webpage -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to JavaScript file for the calculator script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+
+            <!-- Name of the website -->
+            <div class="webname">CostCalc</div>
+
+            <!-- Navigation bar links -->
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#calculator">Trip Cost Calculator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container for the Contact Page -->
+    <div class="contact-page">
+
+        <!-- Contact Section -->
+        <section id="contact" class="form-section" data-animate>
+            <h2>Contact Us</h2>
+
+            <!-- Contact Us form for user to fill -->
+            <form id="contact-form">
+
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+                
+                <!-- Email ID -->
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" placeholder="Your Email ID" required>
+                
+                <!-- Message -->
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Please Enter Your Message"></textarea>
+                
+                <!-- Button to submit the Contact Us form -->
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
