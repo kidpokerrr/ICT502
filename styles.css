@@ -17,7 +17,7 @@ header {
     z-index: 1000; /* This means the header stays above other elements like background image etc. */
 }
 .webname {
-    font-size: clamp(1rem, 3vw, 2.2rem); /* Dynamically adjust website name size */
+    font-size: clamp(1rem, 3vw, 2.4rem); /* Dynamically adjust website name size */
     font-weight: bold; /* Website name text bold */
     color: #14243D; /* Set colour for the website name */
 }
@@ -33,18 +33,27 @@ nav {
     gap: clamp(1.8rem, 2vw, 1.5rem); /* Add dynamic spacing between navigation items */
 }
 .nav-items a {
+    display: block; /* Make a box around the navigation items */
     color: #14243D; /* Set navigation items colour */
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* Dynamic font size for the navigations items */
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* Dynamic font size for the navigation items */
     text-decoration: none; /* Remove underline from the navigation items (links) */
-    transition: color 0.5s ease; /* Smooth colour change on mouse hover */
+    padding: clamp(0.5rem, 1vw, 0.8rem) clamp(1rem, 2vw, 1.5rem); /* Add dynamic padding inside the box */
+    border: 2px solid #14243D; /* Add a border colour to each box */
+    border-radius: 8px; /* Add rounded corners to the boxes */
+    text-align: center; /* Make the text in the boxes align to centre */
+    transition: color 0.7s ease; /* Smooth colour change on mouse hover */
 }
 
 .nav-items a:hover {
     color: #ffff00; /* Change navigation item colour on mouse hover */
+    background-color: #14243D; /* Add background colour on hover to highlight the item */
+    border-color: #14243D; /* Make the border colour same as the box colour */
+    transform: scale(1.05); /* Slightly increase the box size on mouse hover */
+    box-shadow: 3px 4px 4px #ffffffa4; /* Add shadow for the mouse hover effect */
 }
 
 /* index.html Container for both Home and Calculator sections */
-/* This will help add combined items like background image for both the sections and make these items have different 
+/* This will help add combined items like background image for both sections and make these items have different 
 animation properties compared to the individual section items */
 .home-and-calculator {
     background: url('images/index-background.jpg') no-repeat center center/cover; /* Add background image for the section */
@@ -102,6 +111,9 @@ animation properties compared to the individual section items */
     color: white; /* Change button text colour on mouse hover */
     font-weight: bold; /* Keep the button text bold */
     background: #14243D; /* Change button background colour on mouse hover */
+    border-color: #14243D; /* Make the border colour same as the background colour */
+    transform: scale(1.05); /* Slightly increase the box size on mouse hover */
+    box-shadow: 5px 4px 4px #ffffffa4; /* Add shadow for the mouse hover effect */
 }
 
 /* Calculator Section */
@@ -183,6 +195,9 @@ form button:hover {
     color: white; /* Change button text colour on mouse hover */
     font-weight: bold; /* Keep the button text bold */
     background: #14243D; /* Change button background colour on mouse hover */
+    border-color: #14243D; /* Make the border colour same as the background colour */
+    transform: scale(1.05); /* Slightly increase the box size on mouse hover */
+    box-shadow: 5px 4px 4px #ffffffa4; /* Add shadow for the mouse hover effect */
 }
 
 /* Styling the Output Message */
