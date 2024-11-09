@@ -55,17 +55,17 @@
                 <!-- Number of Travelers -->
                 <label for="num-travelers">Number of Travelers:</label>
                 <!-- Ensure that the number is a positive integer -->
-                <input type="number" id="num-travelers" placeholder="e.g., 2" min="1" step="1" required>
+                <input type="number" id="num-travelers" placeholder="e.g., 2" min="1" step="1" max="500" required>
                 
                 <!-- Duration in days -->
                 <label for="duration">Duration (in days):</label>
                 <!-- Ensure that the number is a positive integer -->
-                <input type="number" id="duration" placeholder="e.g., 5" min="1" step="1" required>
+                <input type="number" id="duration" placeholder="e.g., 5" min="1" step="1" max="500" required>
                 
                 <!-- Cost Per Day per person -->
                 <label for="cost-per-day">Cost Per Day (per person):</label>
                 <!-- Ensure that the number is positive -->
-                <input type="number" id="cost-per-day" placeholder="e.g., 100" min="1" required>
+                <input type="number" id="cost-per-day" placeholder="e.g., 100" min="1" max="10000000" required>
                 
                 <!-- Button to calculate the Trip Cost -->
                 <button type="button" id="calculate-btn">Calculate</button>
