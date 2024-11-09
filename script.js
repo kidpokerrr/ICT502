@@ -20,20 +20,30 @@ document.getElementById("calculate-btn")?.addEventListener("click", () => {
     const costPerDay = parseFloat(document.getElementById("cost-per-day").value);
 
 
-    // if loop which check if all the fields are filled and calculates the travel cost
-    if (destination && numTravelers && duration && costPerDay) {
-
-        // The formula
-        const totalCost = numTravelers * duration * costPerDay;
-
-        // Print the output message in the result section
-        document.getElementById("result").textContent =
-            `Total cost for ${numTravelers} traveler(s) to ${destination} is $${totalCost}.`;
-    } 
-    else {
-        // If the any field is empty, show this error message
+    // if loop which check if all the fields are filled correctly and calculates the travel cost
+    if (!destination || !numTravelers || !duration || !costPerDay) {
+        // If destination is empty
         document.getElementById("result").textContent =
             "Please fill in all fields to calculate the cost.";
+    } else if (numTravelers <= 0 || numTravelers > 500) {
+        // If numTravelers is out of range
+        document.getElementById("result").textContent =
+            "Number of travelers must be between 1 and 500.";
+    } else if (duration <= 0 || duration > 500) {
+        // If duration is out of range
+        document.getElementById("result").textContent =
+            "Duration must be between 1 and 500 days.";
+    } else if (costPerDay <= 0 || costPerDay > 10000000) {
+        // If costPerDay is out of range
+        document.getElementById("result").textContent =
+            "Cost per day must be between $1 and $10,000,000.";
+    } else {
+        // If all fields are valid, calculate the total cost
+        const totalCost = numTravelers * duration * costPerDay;
+
+        // Show the result
+        document.getElementById("result").textContent =
+            `Total cost for ${numTravelers} traveler(s) to ${destination} is $${totalCost}.`;
     }
 });
 
